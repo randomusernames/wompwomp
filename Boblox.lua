@@ -237,7 +237,7 @@ char["LavanderHair"].Handle.AccessoryWeld:Destroy() -- destroys the accessorywel
 att0 = Instance.new("Attachment",char["LavanderHair"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, 0, 0)-- rotation
 att0.Position = Vector3.new(0, 0, 0) -- position
-att1 = Instance.new("Attachment",CloneChar["Right Arm"]) -- what body part that the hat should be attached to (to make it work with r15 go down
+att1 = Instance.new("Attachment",CloneChar["Right Leg"]) -- what body part that the hat should be attached to (to make it work with r15 go down
 ap = Instance.new("AlignPosition",char["LavanderHair"].Handle) -- align position
 ap.Attachment0 = att0
 ap.Attachment1 = att1
@@ -256,7 +256,7 @@ char["Robloxclassicred"].Handle.AccessoryWeld:Destroy() -- destroys the accessor
 att0 = Instance.new("Attachment",char["Robloxclassicred"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, 0, 0)-- rotation
 att0.Position = Vector3.new(-0, 0, 0)  -- position
-att1 = Instance.new("Attachment",CloneChar["Left Leg"]) -- what body part that the hat should be attached to (to make it work with r15 go down
+att1 = Instance.new("Attachment",CloneChar["Right Arm"]) -- what body part that the hat should be attached to (to make it work with r15 go down
 ap = Instance.new("AlignPosition",char["Robloxclassicred"].Handle) -- align position
 ap.Attachment0 = att0
 ap.Attachment1 = att1
