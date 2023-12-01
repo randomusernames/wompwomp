@@ -258,7 +258,7 @@ ao.Attachment0 = att0
 ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
-for i = 1, 10000 do
+for i = 1, 420 do
     AlignHats()
 end
  for _,v in pairs(DeadChar:GetChildren()) do
