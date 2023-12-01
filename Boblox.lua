@@ -1,9 +1,9 @@
-game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
-game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
-game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
 game.Players.LocalPlayer.Character["Pink Hair"].Handle.AccessoryWeld:Destroy() 
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.AccessoryWeld:Destroy()
+game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
+game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
+game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 HumanDied = false
 local CountSCIFIMOVIELOL = 1
 function SCIFIMOVIELOL(Part0,Part1,Position,Angle)
