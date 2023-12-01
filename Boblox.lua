@@ -260,8 +260,6 @@ ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
 AlignHats()
-DeadChar.Changed:Connect(AlignHats)
-CloneChar.Changed:Connect(AlignHats)
  for _,v in pairs(DeadChar:GetChildren()) do
 	if v:IsA("BasePart") and v.Name ~= "Head" then
 		local bv = Instance.new("BodyVelocity",v)
@@ -300,4 +298,3 @@ for _,v in next, DeadChar:GetChildren() do
 end
 
 if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
-while wait(1) do AlignHats() end
