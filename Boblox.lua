@@ -260,9 +260,7 @@ ao.Attachment0 = att0
 ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
-for i = 1, 10 do
-    AlignHats()
-end
+ AlignHats()
  for _,v in pairs(DeadChar:GetChildren()) do
 	if v:IsA("BasePart") and v.Name ~= "Head" then
 		local bv = Instance.new("BodyVelocity",v)
