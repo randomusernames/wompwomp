@@ -258,7 +258,7 @@ ao.Attachment0 = att0
 ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
-for i = 1, 10 do
+for i = 1, 10000 do
     AlignHats()
 end
  for _,v in pairs(DeadChar:GetChildren()) do
@@ -289,6 +289,7 @@ for _,BodyParts in next,CloneChar:GetDescendants() do
 if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
 BodyParts.Transparency = 1 end end
 CloneChar.Head.Transparency = 1
+wait(1)
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
