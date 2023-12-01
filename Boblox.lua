@@ -6,7 +6,6 @@ wait(1)
 end)
 end
 end
-end
 
  game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
