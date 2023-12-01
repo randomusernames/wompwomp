@@ -1,4 +1,3 @@
-net = function()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
@@ -8,7 +7,6 @@ end)
 end
 end
 end
-net()
 
  game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
