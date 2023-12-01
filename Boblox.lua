@@ -1,7 +1,9 @@
 game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
-   
+char["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
+char["Pink Hair"].Handle.AccessoryWeld:Destroy() 
+char["LavanderHair"].Handle.AccessoryWeld:Destroy()
 HumanDied = false
 local CountSCIFIMOVIELOL = 1
 function SCIFIMOVIELOL(Part0,Part1,Position,Angle)
@@ -206,7 +208,7 @@ DeadChar["Right Arm"]:Destroy()
 
  char  = game.Players.LocalPlayer.Character
 local function AlignHats()
-char["Pink Hair"].Handle.AccessoryWeld:Destroy() -- destroys the accessoryweld
+-- destroys the accessoryweld
 att0 = Instance.new("Attachment",char["Pink Hair"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, -0, 0) -- rotation
 att0.Position = Vector3.new(0, -0, -0) -- position
@@ -225,7 +227,7 @@ if v:IsA("Accessory") and v.Name == "LavanderHair" then -- dex name for the hat
 v.Name = "LavanderHair" -- name it whatever you want
 end
 end
-char["LavanderHair"].Handle.AccessoryWeld:Destroy() -- destroys the accessoryweld
+ -- destroys the accessoryweld
 att0 = Instance.new("Attachment",char["LavanderHair"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, 0, 0)-- rotation
 att0.Position = Vector3.new(0, 0, 0) -- position
@@ -244,7 +246,7 @@ if v:IsA("Accessory") and v.Name == "Robloxclassicred" then -- dex name for the 
 v.Name = "Robloxclassicred" -- name it whatever you want
 end
 end
-char["Robloxclassicred"].Handle.AccessoryWeld:Destroy() -- destroys the accessoryweld
+ -- destroys the accessoryweld
 att0 = Instance.new("Attachment",char["Robloxclassicred"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, 0, 0)-- rotation
 att0.Position = Vector3.new(-0, 0, 0)  -- position
