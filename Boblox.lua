@@ -288,19 +288,15 @@ end
 for _,BodyParts in next,CloneChar:GetDescendants() do
 if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
 BodyParts.Transparency = 1 end end
-DeadChar.Head.Transparency = 1
-DeadChar.face:Destroy()
-CloneChar.Head.Transparency = 0
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
 
 for _,v in next, DeadChar:GetChildren() do
 	if v:IsA("Accessory") then
-		v.Changed:Connect(AlignHats)
 		if v.Handle:FindFirstChildOfClass("Weld") then v.Handle:FindFirstChildOfClass("Weld"):Destroy() end
 	end
 end
 
 if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
-game["Run Service"].Heartbeat:Connect(AlignHats)
+while wait(1) do AlignHats() end
