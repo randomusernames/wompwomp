@@ -1,6 +1,3 @@
-game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
-game.Players.LocalPlayer.Character["Pink Hair"].Handle.AccessoryWeld:Destroy() 
-game.Players.LocalPlayer.Character["LavanderHair"].Handle.AccessoryWeld:Destroy()
 game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
@@ -205,7 +202,9 @@ DeadChar["Right Leg"]:Destroy()
 DeadChar["Left Arm"]:Destroy()
 DeadChar["Right Arm"]:Destroy()
 
-
+game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
+game.Players.LocalPlayer.Character["Pink Hair"].Handle.AccessoryWeld:Destroy() 
+game.Players.LocalPlayer.Character["LavanderHair"].Handle.AccessoryWeld:Destroy()
  char  = game.Players.LocalPlayer.Character
 local function AlignHats()
 -- destroys the accessoryweld
