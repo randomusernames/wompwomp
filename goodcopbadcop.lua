@@ -1549,6 +1549,7 @@ while true do
 		end
 	end
 end
+wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt"))()
 --//=================================\\
 --\\=================================//
