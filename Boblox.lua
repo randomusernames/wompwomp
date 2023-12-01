@@ -222,6 +222,7 @@ for i,v in pairs(char:GetChildren()) do -- gets all ur characters children
 if v:IsA("Accessory") and v.Name == "LavanderHair" then -- dex name for the hat 
 v.Name = "LavanderHair" -- name it whatever you want
 v.Handle.AccessoryWeld:Destroy()
+Instance.new("SelectionBox",v.Handle)
 end
 end
  -- destroys the accessoryweld
@@ -242,6 +243,7 @@ for i,v in pairs(char:GetChildren()) do -- gets all ur characters children
 if v:IsA("Accessory") and v.Name == "Robloxclassicred" then -- dex name for the hat 
 v.Name = "Robloxclassicred" -- name it whatever you want
 v.Handle.AccessoryWeld:Destroy()
+Instance.new("SelectionBox",v.Handle)
 end
 end
  -- destroys the accessoryweld
@@ -258,7 +260,7 @@ ao.Attachment0 = att0
 ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
-for i = 1, 420 do
+for i = 1, 10 do
     AlignHats()
 end
  for _,v in pairs(DeadChar:GetChildren()) do
