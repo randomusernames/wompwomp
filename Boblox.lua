@@ -202,12 +202,9 @@ DeadChar["Right Leg"]:Destroy()
 DeadChar["Left Arm"]:Destroy()
 DeadChar["Right Arm"]:Destroy()
 
-char["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
-char["Pink Hair"].Handle.AccessoryWeld:Destroy() 
-char["LavanderHair"].Handle.AccessoryWeld:Destroy()
  char  = game.Players.LocalPlayer.Character
 local function AlignHats()
--- destroys the accessoryweld
+char["Pink Hair"].Handle.AccessoryWeld:Destroy()-- destroys the accessoryweld
 att0 = Instance.new("Attachment",char["Pink Hair"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, -0, 0) -- rotation
 att0.Position = Vector3.new(0, -0, -0) -- position
@@ -224,6 +221,7 @@ ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 for i,v in pairs(char:GetChildren()) do -- gets all ur characters children
 if v:IsA("Accessory") and v.Name == "LavanderHair" then -- dex name for the hat 
 v.Name = "LavanderHair" -- name it whatever you want
+v.Handle.AccessoryWeld:Destroy()
 end
 end
  -- destroys the accessoryweld
@@ -243,6 +241,7 @@ ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 for i,v in pairs(char:GetChildren()) do -- gets all ur characters children
 if v:IsA("Accessory") and v.Name == "Robloxclassicred" then -- dex name for the hat 
 v.Name = "Robloxclassicred" -- name it whatever you want
+v.Handle.AccessoryWeld:Destroy()
 end
 end
  -- destroys the accessoryweld
