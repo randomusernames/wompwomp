@@ -202,10 +202,10 @@ DeadChar["Right Leg"]:Destroy()
 DeadChar["Left Arm"]:Destroy()
 DeadChar["Right Arm"]:Destroy()
 
---[[game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
-game.Players.LocalPlayer.Character["Pink Hair"].Handle.AccessoryWeld:Destroy() 
-game.Players.LocalPlayer.Character["LavanderHair"].Handle.AccessoryWeld:Destroy()
- char  = game.Players.LocalPlayer.Character]]--
+char["Robloxclassicred"].Handle.AccessoryWeld:Destroy()
+char["Pink Hair"].Handle.AccessoryWeld:Destroy() 
+char["LavanderHair"].Handle.AccessoryWeld:Destroy()
+ char  = game.Players.LocalPlayer.Character
 local function AlignHats()
 -- destroys the accessoryweld
 att0 = Instance.new("Attachment",char["Pink Hair"].Handle) -- creates a attachment into the hat
