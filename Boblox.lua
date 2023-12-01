@@ -1,10 +1,16 @@
+net = function()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
 v.Velocity = Vector3.new(-50,0,0)
+wait(1)
 end)
 end
 end
+end
+task.spawn(function()
+game["Run Service"].Heartbeat:Connect(net)
+end)
 
  game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
@@ -298,7 +304,7 @@ if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") and then
 BodyParts.Transparency = 1 end end
 DeadChar.Head.Transparency = 1
 DeadChar.face:Destroy()
-CloneChar.Head.Transparency = 1
+CloneChar.Head.Transparency = 0
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
