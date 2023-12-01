@@ -268,7 +268,7 @@ ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
 AlignHats()
 DeadChar.Changed:Connect(AlignHats)
-CloneChat.Changed:Connect(AlignHats)
+CloneChar.Changed:Connect(AlignHats)
  for _,v in pairs(DeadChar:GetChildren()) do
 	if v:IsA("BasePart") and v.Name ~= "Head" then
 		local bv = Instance.new("BodyVelocity",v)
@@ -296,6 +296,8 @@ end
 for _,BodyParts in next,CloneChar:GetDescendants() do
 if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") and then
 BodyParts.Transparency = 1 end end
+DeadChar.Head.Transparency = 1
+DeadChar.face:Destroy()
 CloneChar.Head.Transparency = 1
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
@@ -303,6 +305,7 @@ game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSu
 
 for _,v in next, DeadChar:GetChildren() do
 	if v:IsA("Accessory") then
+		v.Changed:Connect(AlignHats)
 		if v.Handle:FindFirstChildOfClass("Weld") then v.Handle:FindFirstChildOfClass("Weld"):Destroy() end
 	end
 end
