@@ -534,13 +534,13 @@ function Chatter(Text,Timer)
 		for i = 1,string.len(Text),1 do
 			CreateSound(418252437, Head, 3, MRANDOM(8,12)/15, false)
 			tecks2.Text = string.sub(Text,1,i)
-			game.Chat:Chat(game.Players.LocalPlayer.Character,string.sub(Text,1,i),Enum.ChatColor.White)
 			wait(Timer)
 		end
 		wait(1)
 		naeeym2:Destroy()
 	end)
 	chat()
+	game.Chat:Chat(game.Players.LocalPlayer.Character,string.sub(Text,1,i),Enum.ChatColor.White)
 end
 
 --//=================================\\
