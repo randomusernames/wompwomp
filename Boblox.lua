@@ -305,3 +305,4 @@ end
 
 if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/randomusernames/wompwomp/main/goodcopbadcop.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
