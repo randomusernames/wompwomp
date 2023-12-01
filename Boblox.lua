@@ -2,7 +2,6 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
 game:GetService("RunService").Heartbeat:connect(function()
 v.Velocity = Vector3.new(-50,0,0)
-wait(0.5)
 end)
 end
 end
@@ -268,7 +267,8 @@ ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
 AlignHats()
-char.Changed:Connect(AlignHats)
+DeadChar.Changed:Connect(AlignHats)
+CloneChat.Changed:Connect(AlignHats)
  for _,v in pairs(DeadChar:GetChildren()) do
 	if v:IsA("BasePart") and v.Name ~= "Head" then
 		local bv = Instance.new("BodyVelocity",v)
@@ -294,9 +294,9 @@ char.Changed:Connect(AlignHats)
 end
 
 for _,BodyParts in next,CloneChar:GetDescendants() do
-if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") and BodyParts.Name ~= "Head" then
+if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") and then
 BodyParts.Transparency = 1 end end
-DeadChar.Head.Transparency = 1
+CloneChar.Head.Transparency = 1
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
