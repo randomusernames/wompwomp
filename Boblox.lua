@@ -1,6 +1,6 @@
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
+game:GetService("Run Service").Heartbeat:connect(function()
 v.Velocity = Vector3.new(-50,0,0)
 wait(1)
 end)
