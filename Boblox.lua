@@ -268,7 +268,7 @@ ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 end
 AlignHats()
-char:FindFirstChildWhichIsA("Accessory").Changed:Connect(AlignHats)
+char.Changed:Connect(AlignHats)
  for _,v in pairs(DeadChar:GetChildren()) do
 	if v:IsA("BasePart") and v.Name ~= "Head" then
 		local bv = Instance.new("BodyVelocity",v)
@@ -294,8 +294,9 @@ char:FindFirstChildWhichIsA("Accessory").Changed:Connect(AlignHats)
 end
 
 for _,BodyParts in next,CloneChar:GetDescendants() do
-if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
+if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") and BodyParts.Name ~= "Head" then
 BodyParts.Transparency = 1 end end
+DeadChar.Head.Transparency = 1
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
