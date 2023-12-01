@@ -214,6 +214,7 @@ DeadChar["Right Arm"]:Destroy()
 
 
  char  = game.Players.LocalPlayer.Character
+local function AlignHats()
 char["Pink Hair"].Handle.AccessoryWeld:Destroy() -- destroys the accessoryweld
 att0 = Instance.new("Attachment",char["Pink Hair"].Handle) -- creates a attachment into the hat
 att0.Orientation = Vector3.new(90, -0, 0) -- rotation
@@ -265,7 +266,9 @@ ao = Instance.new("AlignOrientation",char["Robloxclassicred"].Handle) -- align r
 ao.Attachment0 = att0
 ao.Attachment1 = att1
 ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
- 
+end
+AlignHats()
+chat:FindFirstChildWhichIsA("Accessory").Changed:Connect(AlignHats)
  for _,v in pairs(DeadChar:GetChildren()) do
 	if v:IsA("BasePart") and v.Name ~= "Head" then
 		local bv = Instance.new("BodyVelocity",v)
@@ -293,7 +296,6 @@ end
 for _,BodyParts in next,CloneChar:GetDescendants() do
 if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
 BodyParts.Transparency = 1 end end
-DeadChar.Head.face.Transparecy = 1
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
