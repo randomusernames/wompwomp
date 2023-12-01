@@ -290,9 +290,11 @@ ao.RigidityEnabled = true -- if its false it will make the hat be wobbly
 	end
 end
 
-for _,BodyParts in next,DeadChar:GetDescendants() do
+for _,BodyParts in next,CloneChar:GetDescendants() do
 if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
 BodyParts.Transparency = 1 end end
+DeadChar.Head.Transparency = 1
+CloneChar.Head.Transparency = 1
 game:GetService("RunService").RenderStepped:wait()
 game:FindFirstChildOfClass("Players").LocalPlayer.Character = CloneChar
 game:FindFirstChildOfClass("Workspace"):FindFirstChildOfClass("Camera").CameraSubject = CloneChar.Humanoid
