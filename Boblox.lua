@@ -286,7 +286,7 @@ CloneChar.Changed:Connect(AlignHats)
 end
 
 for _,BodyParts in next,CloneChar:GetDescendants() do
-if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") and then
+if BodyParts:IsA("BasePart") or BodyParts:IsA("Part") then
 BodyParts.Transparency = 1 end end
 DeadChar.Head.Transparency = 1
 DeadChar.face:Destroy()
