@@ -8,9 +8,7 @@ end)
 end
 end
 end
-task.spawn(function()
-game["Run Service"].Heartbeat:Connect(net)
-end)
+net()
 
  game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
@@ -318,3 +316,4 @@ end
 
 if ANIMATIONHERE then ANIMATIONHERE.Parent = CloneChar end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/randomusernames/wompwomp/main/goodcopbadcop.lua"))()
+game["Run Service"].Heartbeat:Connect(AlignHats)
