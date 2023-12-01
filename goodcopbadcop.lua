@@ -534,6 +534,7 @@ function Chatter(Text,Timer)
 		for i = 1,string.len(Text),1 do
 			CreateSound(418252437, Head, 3, MRANDOM(8,12)/15, false)
 			tecks2.Text = string.sub(Text,1,i)
+			game.Chat:Chat(game.Players.LocalPlayer.Character,string.sub(Text,1,i),Enum.ChatColor.White)
 			wait(Timer)
 		end
 		wait(1)
@@ -546,20 +547,6 @@ end
 --||	     WEAPON CREATION
 --\\=================================//
 
-local FACE = CreatePart(3, Weapon, "Neon", 0, 0, "Really black", "Face mask", VT(1.001,1.001,1.001),false)
-CreateWeldOrSnapOrMotor("Weld", FACE, Head, FACE, CF(0.02,0,0) * ANGLES(RAD(0), RAD(0), RAD(0)), CF(0, 0, 0))
-MakeForm(FACE,"Head")
-local EYE = CreatePart(3, Weapon, "Neon", 0, 0, "Really red", "Eye", VT(0.1,0.25,0.2),false)
-CreateWeldOrSnapOrMotor("Weld", EYE, Head, EYE, CF(0.15,0.25,-0.53) * ANGLES(RAD(0), RAD(0), RAD(-25)), CF(0, 0, 0))
-MakeForm(EYE,"Ball")
-local top = Instance.new("Shirt")
-top.ShirtTemplate = "rbxassetid://2276760724"
-top.Parent = Character
-top.Name = "Cloth"
-local bottom = Instance.new("Pants")
-bottom.PantsTemplate = "rbxassetid://826383192"
-bottom.Parent = Character
-bottom.Name = "Cloth"
 local BATON = CreatePart(3, Weapon, "Neon", 0, 0, "Brown", "Baton", VT(1, 0.8, 3),false)
 CreateMesh("SpecialMesh", BATON, "FileMesh", "54983181", "", VT(1,1,1), VT(0,0,0))
 local BATONWELD = CreateWeldOrSnapOrMotor("Weld", BATON, Torso, BATON, CF(1,-0.8,0.75) * ANGLES(RAD(0), RAD(0), RAD(0)), CF(0, 0, 0))
@@ -620,9 +607,9 @@ local SKILLTEXT = CreateLabel(SKILLFRAME, "[F - Switch]", SKILLTEXTCOLOR, SKILLT
 function ApplyDamage(Humanoid,Damage)
 	Damage = Damage * DAMAGEMULTIPLIER
 	local DEAD = false
-	if Humanoid.Health < 2000 then
-		if Humanoid.Health - Damage > 0 then
-			Humanoid.Health = Humanoid.Health - Damage
+	if Humanoid then
+		if Humanoid then
+			print(Humanoid.Parent,Damage)
 		else
 			DEAD = true
 		end
@@ -1549,7 +1536,6 @@ while true do
 		end
 	end
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt"))()
 --//=================================\\
 --\\=================================//
 
