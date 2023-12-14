@@ -1,13 +1,7 @@
---//====================================================\\--
---||         GOOD COP BAD COP BY SHACKLUSTER
---\\====================================================//--
+=================//--
 local function LoadLibrary(x)
     return require(game:GetService("ReplicatedStorage"):WaitForChild("LoadLibrary"):FindFirstChild(x))
 end
---//====================================================\\--
---||         GOOD COP BAD COP BY SHACKLUSTER
---\\====================================================//--
-
 wait(0.2)
 
 Player = game:GetService("Players").LocalPlayer
